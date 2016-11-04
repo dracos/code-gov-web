@@ -13,6 +13,7 @@ STYLES = set()
 
 def write_source(source, url):
     source = source.replace('href="asset', 'href="/code-gov-web/asset')
+    source = source.replace('href="/asset', 'href="/code-gov-web/asset')
     source = source.replace('src="asset', 'src="/code-gov-web/asset')
     source = source.replace('href="#/', 'href="/code-gov-web/')
     source = re.sub('<script.*?</script>(?s)', '', source)
