@@ -1,0 +1,257 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Policy Implementation Introduction · Code.gov</title>
+  <meta name="description" content="Start here for an overview of the Federal Open Source Code Policy." />
+
+  <meta property="og:image:url" content="assets/img/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+
+  <meta property="twitter:image:src" content="assets/img/og.jpg" />
+  <meta property="twitter:image:width" content="1200" />
+  <meta property="twitter:image:height" content="600" />
+
+  <link rel="image_src" type="image/jpeg" href="/code-gov-web/assets/img/og.jpg" />
+
+  <link rel="stylesheet" href="/code-gov-web/assets/fonts.css" />
+  <link rel="stylesheet" href="/code-gov-web/assets/uswds.min.css" />
+
+  
+
+
+  <!-- Configured Head Tags  -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/favicon-57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/favicon-72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-114.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-144.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png" />
+	<link rel="icon" href="/assets/img/favicons/favicon.ico" />
+	<link rel="manifest" href="/assets/manifest.json" />
+	<meta name="msapplication-TileColor" content="#00bcd4" />
+	<meta name="msapplication-TileImage" content="/assets/img/favicons/favicon-144.png" />
+	<meta name="theme-color" content="#00bcd4" />
+
+
+  <!-- base url -->
+  <base href="/" />
+
+  
+
+
+<link href="/code-gov-web/assets/outwithstyle.76faa48f45e9a239100f0693fc015f51.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.9fa5445c70bd6ba6c931c2cc5005e923.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.10fbb2b41fee6d0b81d2a452aa1430fd.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.9f386e6db4e0ff6de91d4baf8015a9ab.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.0368e3c3f249fb2f13c58bca7c47b397.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.213341e1a10f27953113b77a9d7be03e.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.6ea602dc464ca81786928614bd2bbbf7.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.375deb9a49114e412d52ed2b8cb735bc.css" rel="stylesheet"><meta name="robots" content="Index, Follow" /><link href="/code-gov-web/assets/outwithstyle.6ff8b704505ef9522daf1c4e7e5e9e98.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.4e1966199d315a39e853115941ed6e9d.css" rel="stylesheet"></head>
+
+<body>
+
+  <noscript>
+    &lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9L9Q5&amp;gtm_auth=GTM-M9L9Q5" height="0" width="0" style="display:none;visibility:hidden"&gt;
+    &lt;/iframe&gt;
+  </noscript>
+
+  <app><div class="app-container policy-guide">
+  <header role="banner">
+    <div class="usa-disclaimer">
+      <div class="usa-grid">
+        <span class="usa-disclaimer-official">
+          <img alt="U.S. flag" src="/code-gov-web/assets/img/us_flag_small.png" />
+          An official website of the United States Government
+        </span>
+        <span class="usa-disclaimer-stage">
+          This site is currently in beta.
+        </span>
+      </div>
+    </div>
+
+    <nav class="app-navigation" role="navigation">
+      <div class="usa-grid">
+        <div class="app-logo">
+          <a href="/code-gov-web/">
+            <div class="svg-container">
+              <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 628.17 152.05" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#485567;}.cls-2{fill:#0ac0bb;}</style></defs><title>code.gov</title><path class="cls-1" d="M73,113.49q0-5.11,5.19-5.11H90.61q5.19,0,5.19,5.15v4.12q0,33-33.21,33h-28q-33.21,0-33.21-32.9V74.53q0-32.9,33.21-32.9h28q33.21,0,33.21,32.95V78.7q0,5.15-5.19,5.15H78.16Q73,83.85,73,78.74V75.67q0-6.13-3.63-9.71t-9.86-3.58H37.68q-6.23,0-9.86,3.58t-3.63,9.71v40.88q0,6.13,3.63,9.71t9.86,3.58H59.48q6.23,0,9.86-3.58T73,116.56Z"/><path class="cls-1" d="M120.71,74.53q0-32.9,33.21-32.9H184q33.21,0,33.21,32.9v43.18q0,32.89-33.21,32.9h-30.1q-33.21,0-33.21-32.9Zm22.83,42q0,6.13,3.63,9.71t9.86,3.58H180.9q6.23,0,9.86-3.58t3.63-9.71V75.68q0-6.13-3.63-9.71t-9.86-3.58H157q-6.23,0-9.86,3.58t-3.63,9.71Z"/><path class="cls-1" d="M315.81,42.67V9.33q0-5.05,5.19-5.05h12.45q5.19,0,5.19,5.19V144.38q0,5.19-5.19,5.19H321q-5.19,0-5.19-5.43V138.7h-1a19.33,19.33,0,0,1-4.57,6,28.11,28.11,0,0,1-6.43,4.07A22.58,22.58,0,0,1,294,150.6H277.41q-33.21,0-33.21-33.21V75.88q0-33.2,33.21-33.21Zm0,20.76H280.52q-6.23,0-9.86,3.63T267,76.92v39.44q0,6.23,3.63,9.86t9.86,3.63h17.64q7.88,0,12.77-4.88t4.88-12.77Z"/><path class="cls-1" d="M439.3,118.43q0-5.19,5.19-5.19h12.45q5.19,0,5.19,5.19,0,15.57-8.41,23.87t-24.8,8.3h-28q-33.21,0-33.21-32.9V74.53q0-32.9,33.21-32.9h28q33.21,0,33.21,32.66V98.8q0,5.11-5.19,5.11H390.53v12.45q0,6.23,3.63,9.86t9.86,3.63h23.87Q439.3,129.85,439.3,118.43ZM390.53,84.19H439.3V75.27q0-5.95-3.63-9.41t-9.86-3.47H404q-6.23,0-9.86,3.47t-3.63,9.41Z"/><rect class="cls-2" height="24.13" rx="3" ry="3" width="139.23" x="485.66" y="126.41"/></svg>
+            </div>
+          </a>
+        </div>
+        <ul class="app-links usa-unstyled-list">
+          <li>
+            <a routerlink="explore-code" routerlinkactive="active" href="/code-gov-web/explore-code" class="">
+              Explore Code
+            </a>
+          </li>
+          <li>
+            <a routerlink="policy-guide" routerlinkactive="active" href="/code-gov-web/policy-guide" class="active">
+              Policy Info
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <router-outlet></router-outlet><policy-guide _nghost-aeb-14=""><nav _ngcontent-aeb-14="" class="policy-guide-nav subnav" role="navigation">
+  <div _ngcontent-aeb-14="" class="usa-grid">
+    <ul _ngcontent-aeb-14="" class="usa-unstyled-list">
+      <li _ngcontent-aeb-14="">
+        <a _ngcontent-aeb-14="" routerlink="docs" routerlinkactive="active" class="active" href="/code-gov-web/policy-guide/docs">
+          How To
+        </a>
+      </li>
+      <li _ngcontent-aeb-14="">
+        <a _ngcontent-aeb-14="" href="https://sourcecode.cio.gov/" rel="noopener" target="_blank">
+          Read the Policy
+          <i _ngcontent-aeb-14="" class="fa fa-external-link">
+          </i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div _ngcontent-aeb-14="" class="policy-guide-content">
+  <div _ngcontent-aeb-14="" class="usa-grid">
+    <router-outlet _ngcontent-aeb-14=""></router-outlet><docs><nav class="policy-guide-subnav docs-nav" role="navigation">
+  <button aria-pressed="false" class="mobile-submenu" role="button" toggle-menu="">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      Menu
+    </span>
+  </button>
+  <ul class="usa-sidenav-list">
+    <li routerlinkactive="usa-current" class="usa-current">
+      <a routerlink="overview" routerlinkactive="usa-current" class="usa-current" href="/code-gov-web/policy-guide/docs/overview">Overview</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="overview/introduction" routerlinkactive="usa-current" class="usa-current" href="/code-gov-web/policy-guide/docs/overview/introduction">
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a routerlink="overview/tracking-progress" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/overview/tracking-progress">
+            Tracking Progress
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li routerlinkactive="usa-current">
+      <a routerlink="compliance" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance">Compliance</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="compliance/whats-required" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/whats-required">
+            What’s Required
+          </a>
+        </li>
+        <li>
+          <a routerlink="compliance/inventory-code" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/inventory-code">
+            Inventory Code
+          </a>
+        </li>
+        <li>
+          <a routerlink="compliance/measuring-code" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/measuring-code">
+            Measuring Code
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li routerlinkactive="usa-current">
+      <a routerlink="open-source" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source">Open Source</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="open-source/introduction" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source/introduction">
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a routerlink="open-source/resources" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source/resources">
+            Tools and Resources
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<section class="docs-content">
+  <router-outlet></router-outlet><overview><router-outlet></router-outlet><introduction><h1>Introduction</h1>
+<h2>About the Source Code Policy</h2>
+<p>
+  The President is committed to a 21st Century digital government – one that is designed to improve the lives of Americans and spur innovation with the best that technology has to offer. From helping students and families make more informed decisions about college selection to modernizing our country’s immigration system to opening up thousands of data sets and collections for Americans to leverage, this work has reimagined how government services and resources should be provided to the public.
+</p>
+<p>
+  The <a href="https://sourcecode.cio.gov">Federal Source Code Policy</a> is designed to support reuse and public access to custom-developed Federal source code. It requires new custom-developed source code developed specifically by or for the Federal Government to be made available for sharing and re-use across all Federal agencies. It also includes an Open Source Pilot Program that requires agencies to release at least 20% of new custom-developed Federal source code to the public.
+</p>
+<p>
+  By making source code available for sharing and re-use across Federal agencies, we can avoid duplicative custom software purchases and promote innovation and collaboration across Federal agencies. By opening more of our code to the brightest minds inside and outside of government, we can enable them to work together to ensure that the code is reliable and effective in furthering our national objectives. And we can do all of this while remaining consistent with the Federal Government’s long-standing policy of technology neutrality, through which we seek to ensure that Federal investments in IT are merit-based, improve the performance of our government, and create value for the American people.
+</p>
+<h2>How we'll get there</h2>
+
+<p>
+ This section of code.gov is designed to help agencies understand what is required by the policy and provide advice on how best to get there. Whether you're a developer, a Chief Information Officer, or an acquisition officer, this guide is for you.  Use it to better understand exactly what is required and how to maximize the benefits your agency will realize from implementation of the policy.</p>
+
+<p>Most importantly, unlike the policy itself, the content here is going to evolve and expand quickly. Check back often for new and improved articles. But better still, please consider this site yours. Use the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/">open source repository for this site</a> to ask questions by opening issues and suggest changes to the content using an Issue or Pull Request. If something is confusing or you have a question that isn't addressed, let's fix that together.</p>
+
+<p>On a final but important note, agencies should always treat the content here as purely advisory and rely primarily on the text of the policy itself to satisfy their obligations.</p></introduction>
+</overview>
+</section>
+</docs>
+  </div>
+</div>
+
+<modal _ngcontent-aeb-14="" _nghost-aeb-5=""><!--template bindings={}-->
+</modal>
+</policy-guide>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <div class="usa-grid">
+      <div class="usa-width-two-thirds">
+        <div class="row">
+          <nav class="footer-links">
+            <ul class="usa-unstyled-list">
+              <li>
+                <a routerlink="privacy-policy" href="/code-gov-web/privacy-policy">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="https://github.com/presidential-innovation-fellows/code-gov-web" rel="noopener" target="_blank">Visit Project Page</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="row">
+          <ul class="agency-logos usa-unstyled-list">
+            <li class="whitehouse">
+              <a href="https://whitehouse.gov" rel="noopener" target="_blank">
+                <img alt="The White House" src="/code-gov-web/assets/img/logos/whitehouse.png" />
+              </a>
+            </li>
+            <li class="pif">
+              <a href="https://presidentialinnovationfellows.gov/" rel="noopener" target="_blank">
+                <img alt="Presidential Innovation Fellows" src="/code-gov-web/assets/img/logos/PIF.png" />
+              </a>
+            </li>
+            <li class="gsa">
+              <a href="//gsa.gov" rel="noopener" target="_blank">
+                <img alt="General Services Administration" src="/code-gov-web/assets/img/logos/GSA.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</app>
+
+
+
+
+
+
+</body></html>

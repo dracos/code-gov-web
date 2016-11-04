@@ -1,0 +1,273 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Measuring Source Code · Code.gov</title>
+  <meta name="description" content="Learn about different ways to measure source code and how to choose the best method for your agency." />
+
+  <meta property="og:image:url" content="assets/img/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+
+  <meta property="twitter:image:src" content="assets/img/og.jpg" />
+  <meta property="twitter:image:width" content="1200" />
+  <meta property="twitter:image:height" content="600" />
+
+  <link rel="image_src" type="image/jpeg" href="/code-gov-web/assets/img/og.jpg" />
+
+  <link rel="stylesheet" href="/code-gov-web/assets/fonts.css" />
+  <link rel="stylesheet" href="/code-gov-web/assets/uswds.min.css" />
+
+  
+
+
+  <!-- Configured Head Tags  -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/favicon-57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/favicon-72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-114.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-144.png" />
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png" />
+	<link rel="icon" href="/assets/img/favicons/favicon.ico" />
+	<link rel="manifest" href="/assets/manifest.json" />
+	<meta name="msapplication-TileColor" content="#00bcd4" />
+	<meta name="msapplication-TileImage" content="/assets/img/favicons/favicon-144.png" />
+	<meta name="theme-color" content="#00bcd4" />
+
+
+  <!-- base url -->
+  <base href="/" />
+
+  
+
+
+<link href="/code-gov-web/assets/outwithstyle.76faa48f45e9a239100f0693fc015f51.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.9fa5445c70bd6ba6c931c2cc5005e923.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.10fbb2b41fee6d0b81d2a452aa1430fd.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.9f386e6db4e0ff6de91d4baf8015a9ab.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.0368e3c3f249fb2f13c58bca7c47b397.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.213341e1a10f27953113b77a9d7be03e.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.6ea602dc464ca81786928614bd2bbbf7.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.375deb9a49114e412d52ed2b8cb735bc.css" rel="stylesheet"><meta name="robots" content="Index, Follow" /><link href="/code-gov-web/assets/outwithstyle.6ff8b704505ef9522daf1c4e7e5e9e98.css" rel="stylesheet"><link href="/code-gov-web/assets/outwithstyle.4e1966199d315a39e853115941ed6e9d.css" rel="stylesheet"></head>
+
+<body>
+
+  <noscript>
+    &lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9L9Q5&amp;gtm_auth=GTM-M9L9Q5" height="0" width="0" style="display:none;visibility:hidden"&gt;
+    &lt;/iframe&gt;
+  </noscript>
+
+  <app><div class="app-container policy-guide">
+  <header role="banner">
+    <div class="usa-disclaimer">
+      <div class="usa-grid">
+        <span class="usa-disclaimer-official">
+          <img alt="U.S. flag" src="/code-gov-web/assets/img/us_flag_small.png" />
+          An official website of the United States Government
+        </span>
+        <span class="usa-disclaimer-stage">
+          This site is currently in beta.
+        </span>
+      </div>
+    </div>
+
+    <nav class="app-navigation" role="navigation">
+      <div class="usa-grid">
+        <div class="app-logo">
+          <a href="/code-gov-web/">
+            <div class="svg-container">
+              <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 628.17 152.05" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#485567;}.cls-2{fill:#0ac0bb;}</style></defs><title>code.gov</title><path class="cls-1" d="M73,113.49q0-5.11,5.19-5.11H90.61q5.19,0,5.19,5.15v4.12q0,33-33.21,33h-28q-33.21,0-33.21-32.9V74.53q0-32.9,33.21-32.9h28q33.21,0,33.21,32.95V78.7q0,5.15-5.19,5.15H78.16Q73,83.85,73,78.74V75.67q0-6.13-3.63-9.71t-9.86-3.58H37.68q-6.23,0-9.86,3.58t-3.63,9.71v40.88q0,6.13,3.63,9.71t9.86,3.58H59.48q6.23,0,9.86-3.58T73,116.56Z"/><path class="cls-1" d="M120.71,74.53q0-32.9,33.21-32.9H184q33.21,0,33.21,32.9v43.18q0,32.89-33.21,32.9h-30.1q-33.21,0-33.21-32.9Zm22.83,42q0,6.13,3.63,9.71t9.86,3.58H180.9q6.23,0,9.86-3.58t3.63-9.71V75.68q0-6.13-3.63-9.71t-9.86-3.58H157q-6.23,0-9.86,3.58t-3.63,9.71Z"/><path class="cls-1" d="M315.81,42.67V9.33q0-5.05,5.19-5.05h12.45q5.19,0,5.19,5.19V144.38q0,5.19-5.19,5.19H321q-5.19,0-5.19-5.43V138.7h-1a19.33,19.33,0,0,1-4.57,6,28.11,28.11,0,0,1-6.43,4.07A22.58,22.58,0,0,1,294,150.6H277.41q-33.21,0-33.21-33.21V75.88q0-33.2,33.21-33.21Zm0,20.76H280.52q-6.23,0-9.86,3.63T267,76.92v39.44q0,6.23,3.63,9.86t9.86,3.63h17.64q7.88,0,12.77-4.88t4.88-12.77Z"/><path class="cls-1" d="M439.3,118.43q0-5.19,5.19-5.19h12.45q5.19,0,5.19,5.19,0,15.57-8.41,23.87t-24.8,8.3h-28q-33.21,0-33.21-32.9V74.53q0-32.9,33.21-32.9h28q33.21,0,33.21,32.66V98.8q0,5.11-5.19,5.11H390.53v12.45q0,6.23,3.63,9.86t9.86,3.63h23.87Q439.3,129.85,439.3,118.43ZM390.53,84.19H439.3V75.27q0-5.95-3.63-9.41t-9.86-3.47H404q-6.23,0-9.86,3.47t-3.63,9.41Z"/><rect class="cls-2" height="24.13" rx="3" ry="3" width="139.23" x="485.66" y="126.41"/></svg>
+            </div>
+          </a>
+        </div>
+        <ul class="app-links usa-unstyled-list">
+          <li>
+            <a routerlink="explore-code" routerlinkactive="active" href="/code-gov-web/explore-code" class="">
+              Explore Code
+            </a>
+          </li>
+          <li>
+            <a routerlink="policy-guide" routerlinkactive="active" href="/code-gov-web/policy-guide" class="active">
+              Policy Info
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <router-outlet></router-outlet><policy-guide _nghost-aeb-14=""><nav _ngcontent-aeb-14="" class="policy-guide-nav subnav" role="navigation">
+  <div _ngcontent-aeb-14="" class="usa-grid">
+    <ul _ngcontent-aeb-14="" class="usa-unstyled-list">
+      <li _ngcontent-aeb-14="">
+        <a _ngcontent-aeb-14="" routerlink="docs" routerlinkactive="active" class="active" href="/code-gov-web/policy-guide/docs">
+          How To
+        </a>
+      </li>
+      <li _ngcontent-aeb-14="">
+        <a _ngcontent-aeb-14="" href="https://sourcecode.cio.gov/" rel="noopener" target="_blank">
+          Read the Policy
+          <i _ngcontent-aeb-14="" class="fa fa-external-link">
+          </i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div _ngcontent-aeb-14="" class="policy-guide-content">
+  <div _ngcontent-aeb-14="" class="usa-grid">
+    <router-outlet _ngcontent-aeb-14=""></router-outlet><docs><nav class="policy-guide-subnav docs-nav" role="navigation">
+  <button aria-pressed="false" class="mobile-submenu" role="button" toggle-menu="">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      Menu
+    </span>
+  </button>
+  <ul class="usa-sidenav-list">
+    <li routerlinkactive="usa-current" class="">
+      <a routerlink="overview" routerlinkactive="usa-current" class="" href="/code-gov-web/policy-guide/docs/overview">Overview</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="overview/introduction" routerlinkactive="usa-current" class="" href="/code-gov-web/policy-guide/docs/overview/introduction">
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a routerlink="overview/tracking-progress" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/overview/tracking-progress" class="">
+            Tracking Progress
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li routerlinkactive="usa-current" class="usa-current">
+      <a routerlink="compliance" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance" class="usa-current">Compliance</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="compliance/whats-required" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/whats-required" class="">
+            What’s Required
+          </a>
+        </li>
+        <li>
+          <a routerlink="compliance/inventory-code" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/inventory-code" class="">
+            Inventory Code
+          </a>
+        </li>
+        <li>
+          <a routerlink="compliance/measuring-code" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/compliance/measuring-code" class="usa-current">
+            Measuring Code
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li routerlinkactive="usa-current">
+      <a routerlink="open-source" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source">Open Source</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a routerlink="open-source/introduction" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source/introduction">
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a routerlink="open-source/resources" routerlinkactive="usa-current" href="/code-gov-web/policy-guide/docs/open-source/resources">
+            Tools and Resources
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<section class="docs-content">
+  <router-outlet></router-outlet><compliance><router-outlet></router-outlet><measuring-code><h1>Measuring Source Code</h1>
+<p>As part of the Open Source Pilot Program the Federal Source Code Policy requires that:</p>
+<blockquote class="usa-quote">
+	<p>Each agency shall release as OSS at least 20 percent of its new custom-developed code each year.</p>
+</blockquote>
+<p>Broadly, to satisfy this requirement agencies will need to do two things:</p>
+<ul>
+<li>Choose a method of measuring the size of code</li>
+<li>Apply the measurement method to the total enterprise code inventory to establish a baseline</li>
+</ul>
+<h2>Choosing a measure</h2>
+<p>Having established an inventory of new custom-developed code, agencies will still need to determine their method of measuring the amount of code it represents. The Open Source community and Federal developers have suggested a number of options that agencies may choose from. These include:</p>
+<ul>
+<li>Source lines of code</li>
+<li>Number of self-contained modules</li>
+<li>Cost</li>
+<li>Number of software projects</li>
+<li>System certification and accreditation boundaries</li>
+</ul>
+<p>This list is not exhaustive and agencies should choose the most appropriate measure for their organization. When choosing a measure, agencies should consider the following factors:</p>
+<ul>
+<li>Automation. Is it possible to collect the data for the measure automatically or automate aspects of the collection process? For example, can a script be developed to tabulate the number of lines of source code in your repositories?</li>
+<li>Existing processes. Does your agency already collect data or collect systems information that can be repurposed to meet this requirement?</li>
+<li>Approximation. Given the difficulty in definitively calculating most reasonable measures related to this requirement, the Federal Source Code Policy leaves room for agencies to use approximate or "estimated" measures. For example, the number of source lines of code in a particular codebase may fluctuate day to day. Or if cost is your measure, the development of a particular codebase may have been purchased in combination with other services. Agencies may use approximation in measuring their code but should do so according to a documented, justifiable process that is applied consistently and considers the overall goals of the policy.</li>
+<li>To the extent practicable, agencies should use a consistent measure across their organization.</li>
+</ul>
+<h2>Measuring your code for the first time</h2>
+<p>Having chosen a measure, your agency will need to measure the size of its codebases that are under active development to establish a baseline.</p>
+<p>Things to consider include:</p>
+<ul>
+<li>This requirement complements the requirement to account for 100% of new custom-developed code in your agency’s enterprise code inventory (or in the form of exemptions from inclusion in the inventory). Importantly, for the purposes of calculating your total amount of custom code, agencies <em>should include </em>code that is unlikely or certain not to be released for reasons of national security or the other exemptions related to the enterprise code inventory.</li>
+<li>Remember that the Federal Source Code Policy requires each agency to release "20% of its new custom-developed code each year for the term of the pilot program" and does not apply retroactively. However, making such code available for Government-wide reuse or as OSS, to the extent practicable, is strongly encouraged.</li>
+<li>In defining "custom code", the Federal Source Code Policy allows agencies to exclude "code that is truly exploratory or disposable in nature, such as that written by a developer experimenting with a new language or library." As with measuring the size of code, agencies should adopt a consistent, justifiable approach to determining whether code qualifies and can be excluded from the enterprise code inventory nd open source pilot. In that context, agencies should err on the side of including code.</li>
+</ul>
+</measuring-code>
+</compliance>
+</section>
+</docs>
+  </div>
+</div>
+
+<modal _ngcontent-aeb-14="" _nghost-aeb-5=""><!--template bindings={}-->
+</modal>
+</policy-guide>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <div class="usa-grid">
+      <div class="usa-width-two-thirds">
+        <div class="row">
+          <nav class="footer-links">
+            <ul class="usa-unstyled-list">
+              <li>
+                <a routerlink="privacy-policy" href="/code-gov-web/privacy-policy">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="https://github.com/presidential-innovation-fellows/code-gov-web" rel="noopener" target="_blank">Visit Project Page</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="row">
+          <ul class="agency-logos usa-unstyled-list">
+            <li class="whitehouse">
+              <a href="https://whitehouse.gov" rel="noopener" target="_blank">
+                <img alt="The White House" src="/code-gov-web/assets/img/logos/whitehouse.png" />
+              </a>
+            </li>
+            <li class="pif">
+              <a href="https://presidentialinnovationfellows.gov/" rel="noopener" target="_blank">
+                <img alt="Presidential Innovation Fellows" src="/code-gov-web/assets/img/logos/PIF.png" />
+              </a>
+            </li>
+            <li class="gsa">
+              <a href="//gsa.gov" rel="noopener" target="_blank">
+                <img alt="General Services Administration" src="/code-gov-web/assets/img/logos/GSA.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</app>
+
+
+
+
+
+
+</body></html>
