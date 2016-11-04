@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+from hashlib import md5
+import os
+import re
+from selenium import webdriver
+
+sel = webdriver.Chrome()
+sel.implicitly_wait(5)
+
+SEEN = set()
+STYLES = set()
+
+def write_source(source, url):
+    source = source.replace('href="asset', 'href="/code-gov-web/asset')
+    source = source.replace('src="asset', 'src="/code-gov-web/asset')
+    source = source.replace('href="#/', 'href="/code-gov-web/')
+    source = re.sub('<script.*?</script>(?s)', '', source)
+    styles = re.findall('<style>(.*?)</style>(?s)', source)
+    for style in styles:
+        if style.startswith('.cls-1'): continue
+        h = md5(style.encode('utf-8')).hexdigest()
+        csspath = 'assets/outwithstyle.%s.css' % h
+        fp = open(csspath, 'w')
+        fp.write(style.encode('utf-8'))
+        fp.close()
+        source = source.replace('<style>%s</style>' % style, '<link href="/code-gov-web/%s" rel="stylesheet">' % csspath)
+    filepath = url.replace('https://code.gov/#/', '')
+    os.system('mkdir -p %s' % filepath)
+    if filepath: filepath += '/'
+    fp = open('%sindex.html' % filepath, 'w')
+    fp.write(source.encode('utf-8'))
+    fp.close()
+
+def fetch(href):
+    sel.get(href)
+    source = sel.page_source
+    url = sel.current_url
+    write_source(source, url)
+    SEEN.add(url)  # Might differ from clicked link URL
+    print 'Fetched %s' % url
+    links = sel.find_elements_by_tag_name('a')
+    hrefs = [ link.get_attribute('href') for link in links ]
+    hrefs = [ href for href in hrefs if href.startswith('https://code.gov/#/') ]
+    for href in hrefs:
+        if href not in SEEN:
+            SEEN.add(href)
+            fetch(href)
+
+try:
+    fetch('https://code.gov/')
+except:
+    sel.close()
+    raise
+
+sel.close()
